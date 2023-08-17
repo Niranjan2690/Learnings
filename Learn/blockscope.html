@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Block Scope</title>
+</head>
+<body>
+    <h1 id="display"></h1>
+    <script>
+        var hero = {
+            title : "Batman",
+            power : 7
+        } 
+
+        function changetitle(){
+            if(hero.power > 5){
+                let title2 = hero.title;
+                hero.title = title2+ " is dark night"
+            }
+        }
+        changetitle()
+        console.log(hero.title)
+
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById('display').innerHTML = changetitle();
+        })
+    </script>
+</body>
+</html>

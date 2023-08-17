@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="form-input">
+        <h1>login</h1>
+        <form onsubmit="return validate()">
+            <div class="username">
+                <label for="username">Enter User Name</label>
+                <input type="text" id="usrname">
+                <p class="error" id="usererror"></p>
+            </div>
+            <div class="pswd">
+                <label>Enter User Password</label>
+                <input type="password" id="password">
+                <p class="error" id="passworderror"></p>
+            </div>
+            <div class="btn">
+                <button type="submit">Login</button>
+            </div>
+        </form>
+    </div>
+    <script src="js/validate.js"></script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function fun1(){
+        document.getElementById("log").innerHTML = "Fun1 on load..."
+        console.log("Fun1 on load...")
+}
+
+    function fun2(){
+        document.getElementById("log").innerHTML = "Fun2 on load..."
+        console.log("Fun2 on load...")
+}
+
+    function fun3(){
+        document.getElementById("log").innerHTML = "Fun3 on load..."
+        console.log("Fun3 on load")
+}
+
+window.addEventListener('load', fun2)
+document.addEventListener('DOMContentLoaded', fun3)
+</script>
+
+<body onload="fun1()">
+    <h1 id="log">Niranjan</h1>
+</body>
+</html>

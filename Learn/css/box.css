@@ -1,0 +1,25 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0%;
+    padding: 0%;
+}
+.container{
+    width: 500px;
+    height: 400px;
+    background-color: blueviolet;
+}
+
+.box{
+    width: 100px;
+    height: 100px;
+    background-color: chocolate ;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
