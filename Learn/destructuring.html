@@ -7,7 +7,7 @@
 </head>
 <body>
     <script>
-        // Rest syntax (...) to create a function is called rest
+        // Rest syntax (...) to create a function is called rest........
 
         function adder(...num){
             var total = 0;
@@ -21,13 +21,13 @@
         console.log(adder(5,6,7))
         console.log(adder(5,6,7,8,9))
 
-        // Rest syntax with string
+        // Rest syntax with string...................
         function adder(label, ...num){
             var total = 0;
             for(let i = 0; i < num.length; i++){
                 total += num[i] 
             }
-            //concating string and integer
+            //concating string and integer..................
             return label + total;
         }
         console.log("Sum is", adder(5))
@@ -35,14 +35,14 @@
         console.log("Sum is", adder(5,6,7))
         console.log("Sum is", adder(5,6,7,8,9))
 
-        //Spread syntax---------to call a function is known as spread syntax
+        //Spread syntax---------to call a function is known as spread syntax.......
 
         let nir = [1, 2, 3, 4, 5, 6]
         console.log(nir[0], nir[1], nir[2], nir[3], nir[4], nir[5])
         console.log(adder("Sum is ", nir[0], nir[1], nir[2], nir[3], nir[4], nir[5]))
         console.log(adder("Sum is ", ...nir))
 
-        // Destructuring an object notation
+        // Destructuring an object notation..........
         var hero = {
             title : "Ironman",
             power : 7,
@@ -54,11 +54,14 @@
         console.log(hero.title)
         console.log(firstavenger.title)
 
-        // Destructuring an array notation
+        // Destructuring an array notation.............
 
         let destruct = ['Niranjan', 'Saranya', 'Dhruvesh']
         let [Firsthero, Secondhero, Thirdhero] = [...destruct]
         console.log(Firsthero)
+        console.log(Secondhero)
+        console.log(Thirdhero)
+        console.log(Firsthero, Secondhero, Thirdhero)
     </script>
 </body>
 </html>
