@@ -6,6 +6,7 @@
     <title>Arrow Function</title>
 </head>
 <body>
+    <h1></h1>
     <script>
         //Function Declaration --> it will not get hoisted
         function arrow_dec(num1, num2){
@@ -14,11 +15,42 @@
         console.log(arrow_dec(5, 6))
 
         //Function Expression --> it will get hoisted and also it will be converted as Arrow Function
-
         var arrow_exp = (num1, num2) => {
             return num1 + num2;
         }
         console.log(arrow_exp(5, 6))
+
+        //Function using object(it will display an error)
+
+         var fun = {
+            cart1: function(){
+                return 7;
+            },
+            cart2: function(){
+                var booster = function (){
+                    return this.cart1() * 10;
+                };
+                return "hello my power is boosted to " + booster();
+            }
+        }
+            console.log(fun.cart1())
+            console.log(fun.cart2()) 
+
+    // Arrow function using object
+
+        var arrfun = {
+            saypower : function(){
+                return 100;
+            },
+            saygreeting : function(){
+                var boosted = () => {
+                    return this.saypower() * 10
+                }
+                return "hello my power is boosted from 100 to " + boosted()
+            }
+        }
+        console.log(arrfun.saypower())
+        console.log(arrfun.saygreeting())
     </script>
 </body>
 </html>
