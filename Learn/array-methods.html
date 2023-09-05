@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Method</title>
+</head>
+<body>
+<script>
+    //Method 1 ... This method makes slow to load the data
+
+    let favnums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    let total = 0;
+    for(let i=0; i<favnums.length; i++){
+        total += favnums[i];
+    }
+    console.log(total)
+
+    const array = ['a', 'b', 'c'];
+    array.forEach(val => {
+        console.log(val)
+    })
+
+    //Method 2 --- for each
+    let total1 = 0;
+    const array1 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    array1.forEach(val => {
+        total1 += val; 
+    })
+    console.log(total1)
+
+    let doubelarray = [];
+    const array2 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    array2.forEach((val) => {
+        doubelarray += (val * 2)
+    })
+    console.log(doubelarray)
+
+    //Method 3 --- Map
+    const array3 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let doyblearray3 = array3.map((val)=>{
+        return val*2
+    })
+    console.log(doyblearray3)
+
+    //Method 3 --- Filter
+
+    const array4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let Filter = array4.filter((val)=>{
+        return val >= 5
+    })
+    console.log(Filter)
+
+    //Method 4 --- Reduce
+
+    const array5 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+    let total3 = array5.reduce((initval, val, idx, arr)=>{
+        console.log(arr)
+        return initval + idx;
+    }, 0)
+    console.log(total3)
+    </script>
+</body>
+</html>
