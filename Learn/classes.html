@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classes</title>
+</head>
+<body>
+<script>
+   /*   Private Properties
+        Public Properties
+
+        Private Methods
+        Public Methods
+
+        Constructor
+
+        Static Properties and Methods
+
+        getters and setters 
+    */
+
+    // ES6 (old method)
+
+    class Hero1{
+        constructor(){
+            this.title1 = "Dhruvesh"
+        }
+    };
+    let hero1 = new Hero1();
+    console.log(hero1.title1)
+
+
+    // ES7 Latest javascript method 
+    class Hero{
+        title = "Ironman"; // Public Property
+        firstname = "Tony";
+        lastname = "Stark";
+        #Power = 5 // Private Property
+        fullname(){ //Public Method
+            return this.firstname + " " + this.lastname;
+        }
+
+        get Power(){ //getter method
+            return this.#Power
+        }
+        
+        set Power(npower){ //setter method
+            return this.#Power = npower;
+        }
+    };
+
+    let hero = new Hero();
+    console.log(hero.title)
+    console.log(hero.fullname())
+    console.log(hero.Power)
+    hero.Power = 10;
+    console.log(hero.Power)
+    
+
+</script>
+</body>
+</html>
