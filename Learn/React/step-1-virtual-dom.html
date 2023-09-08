@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Virtual DOM</title>
+    <style>
+        .box{
+            background-color: aqua;
+            width: auto;
+            height: auto;
+            color:aliceblue;
+            line-height: 150px;
+        }
+    </style>
+    <script>
+        let elm = document.createElement("div")
+        elm.innerText = "React Virtual DOM"
+        elm.setAttribute('class', 'box')
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("root").appendChild(elm)
+        })
+
+        let elm1 = document.createElement("ul")
+        let firstelm = document.createElement("li")
+            firstelm.innerText = "List item 1"
+        let secondelm = document.createElement("li")
+            secondelm.innerText = "List item 2"
+        let thirdelm = document.createElement("li")
+            thirdelm.innerText = "List item 3"
+        elm1.setAttribute('class', 'box')
+        elm1.appendChild(firstelm)
+            .appendChild(secondelm)
+            .appendChild(thirdelm)
+        document.addEventListener("DOMContentLoaded", function(){
+            document.getElementById("root").appendChild(elm1)
+        })
+    </script>
+</head>
+<body>
+    <div id="root"></div>
+</body>
+</html>

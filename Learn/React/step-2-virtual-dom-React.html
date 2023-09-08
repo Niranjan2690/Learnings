@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>React Virtual DOM</title>
+    <style>
+        .box{
+            background-color: gray;
+            width: 150px;
+            height: 150px;
+            color:aliceblue; 
+            line-height: 150px;
+        }
+    </style>
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+    <script>
+        let elm = React.createElement("div", {className: 'box'}, "React Virtual DOM")
+        document.addEventListener("DOMContentLoaded", function(){
+            ReactDOM.createRoot(document.getElementById('root')).render(elm)
+        })
+
+        let elm1 = React.createElement("ul", null, 
+        React.createElement("li", null, "List item 1"),
+        React.createElement("li", null, "List item 2"),
+        React.createElement("li", null, "List item 3"))
+        document.addEventListener("DOMContentLoaded", function(){
+            ReactDOM.createRoot(document.getElementById('root')).render(elm1)
+        })
+    </script>
+</head>
+<body>
+<div id="root"></div>
+</body>
+</html>
