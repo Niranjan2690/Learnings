@@ -1,0 +1,6 @@
+for browser support:   https://caniuse.com/
+for javascript learnings: https://developer.mozilla.org/en-US/
+for ECMA script versions: https://www.ecma-international.org/publications-and-standards/standards/ecma-262/
+for React documentation: https://react.dev/
+for prop types: https://www.npmjs.com/ (install: npm i prop-types)
+for Duplicate Database: https://reqres.in/

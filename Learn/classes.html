@@ -32,11 +32,21 @@
 
 
     // ES7 Latest javascript method 
-    class Hero{
+
+    class person{
+        proper = "can walk";
+        constructor(cw, cf){
+            this.canwalk = cw;
+            this.canfly = cf;
+        }
+    }
+
+    class Hero extends person{
         title = "Ironman"; // Public Property
         firstname = "Tony";
         lastname = "Stark";
         #Power = 5 // Private Property
+        static version = 100;
         fullname(){ //Public Method
             return this.firstname + " " + this.lastname;
         }
@@ -48,14 +58,33 @@
         set Power(npower){ //setter method
             return this.#Power = npower;
         }
+
+        constructor(htitle, hfirstname, hlastname, hcw, hcf){
+            super(hcw, hcf);
+            this.title = htitle;
+            this.firstname = hfirstname;
+            this.lastname = hlastname;
+        };
     };
 
-    let hero = new Hero();
+    let hero = new Hero("Batman", "Bruce", "Weine", "can walk", "yes");
     console.log(hero.title)
     console.log(hero.fullname())
     console.log(hero.Power)
     hero.Power = 10;
     console.log(hero.Power)
+    console.log(Hero.version);
+    console.log(hero.canwalk)
+    console.log(hero.canfly)
+
+    let hero2 = new Hero("Spiderman", "Peter", "parker", "can fly", "yes");
+    console.log(hero2.title)
+    console.log(hero2.fullname())
+    console.log(hero2.Power)
+    hero2.Power = 10;
+    console.log(hero2.Power)
+    console.log(hero2.canwalk)
+    console.log(hero2.canfly)
     
 
 </script>
