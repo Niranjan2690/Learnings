@@ -1,0 +1,13 @@
+MongoDB
+username: admin
+Password: lk6f3iiSCoSnKYvO
+database name: userdb
+collection name: users
+Drivername: mongodb+srv://admin:lk6f3iiSCoSnKYvO@niranjandb.0skrij1.mongodb.net/userdb?retryWrites=true&w=majority
+
+
+server installation commands
+
+step 1: npm init -y   (to create package.json)
+step 2: npm i cors express mongoose   
+step 3: node .   (after creating server configuration run this command in terminal to see whether the express is connected or not)
