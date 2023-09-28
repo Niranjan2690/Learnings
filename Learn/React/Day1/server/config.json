@@ -1,0 +1,11 @@
+{
+    "port" : "5050",
+    "username" : "admin",
+    "Password": "lk6f3iiSCoSnKYvO",
+    "host": "localhost",
+    "clustername": "niranjandb",
+    "dbasename": "userdb",
+    "dbstring": "0skrij1",
+    "collection name": "users",
+    "url": "mongodb+srv://{{username}}:{{Password}}@{{clustername}}.{{dbstring}}.mongodb.net/{{dbasename}}?retryWrites=true&w=majority"
+}
